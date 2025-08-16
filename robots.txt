@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.cropimages.org
+
+# Sitemaps
+Sitemap: https://www.cropimages.org/sitemap.xml
