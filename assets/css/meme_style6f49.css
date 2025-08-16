@@ -1,0 +1,290 @@
+.template-thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.template-thumb img {
+    width: 100px;
+}
+
+.mem-textarea{
+    width: calc(100% - 30px);
+    height: 40px;
+    min-height: 40px;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    text-align: center;
+}
+.mem-textarea-add{
+    width: 100%;
+    text-align: left;
+    height: auto;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.add-label {
+    margin: 0;
+    font-weight: 600;
+    font-size: .8em;
+}
+
+.mem-full {
+    width: 96vw;
+}
+
+.mem-textbox {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+.mem-set-btn {
+    border: none;
+}
+
+.mem-texts {
+    padding: 0 15px 20px 15px;
+    border-bottom: 1px solid #ced4da;
+}
+
+.mem-thumbs {
+    cursor: pointer;
+}
+
+
+.text-style-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.text-style-button {
+    border: 1px solid transparent;
+    padding: 2px 7px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    background: transparent;
+}
+.text-style-button:hover {
+    border-color: #ced4da;
+
+}
+
+.text-style-button.active {
+    border-color: #1070e6;
+}
+
+.h2-meme-header {
+    font-size: 1.25rem;
+}
+
+
+/* Стили для горизонтального bar-а с настройками текста */
+.text-settings-bar {
+    display: flex;
+    position: relative;
+    opacity: 0;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    background: #f6f6f6;
+}
+
+.tsb-input-header {
+    border-color: transparent;
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgdmlld0JveD0iMCAwIDIwIDIwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xNiA5djhoLTJWOWgtNFY3aDEwdjJoLTR6TTggNXYxMkg2VjVIMFYzaDE1djJIOHoiLz48L3N2Zz4=");
+    background-repeat: no-repeat;
+    padding: 12px;
+}
+.text-settings-button {
+    border-color: transparent;
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZGF0YS1uYW1lPSJMaXZlbGxvIDEiIGlkPSJMaXZlbGxvXzEiIHZpZXdCb3g9IjAgMCAxMjggMTI4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZS8+PHBhdGggZD0iTTY0LDM5QTI1LDI1LDAsMSwwLDg5LDY0LDI1LDI1LDAsMCwwLDY0LDM5Wm0wLDQ0QTE5LDE5LDAsMSwxLDgzLDY0LDE5LDE5LDAsMCwxLDY0LDgzWiIvPjxwYXRoIGQ9Ik0xMjEsNDhoLTguOTNhMSwxLDAsMCwxLS45NC0uNjgsNDkuOSw0OS45LDAsMCwwLTItNC44NSwxLDEsMCwwLDEsLjE4LTEuMTVMMTE1LjYyLDM1YTcsNywwLDAsMCwwLTkuOUwxMDIuODksMTIuMzhhNyw3LDAsMCwwLTkuOSwwbC02LjMxLDYuMzFhMSwxLDAsMCwxLTEuMTUuMTgsNDkuNzYsNDkuNzYsMCwwLDAtNC44NS0yLDEsMSwwLDAsMS0uNjgtLjk0VjdhNyw3LDAsMCwwLTctN0g1NWE3LDcsMCwwLDAtNyw3djguOTNhMSwxLDAsMCwxLS42OC45NCw0OS45LDQ5LjksMCwwLDAtNC44NSwyLDEsMSwwLDAsMS0xLjE1LS4xOEwzNSwxMi4zOGE3LDcsMCwwLDAtOS45LDBMMTIuMzgsMjUuMTFhNyw3LDAsMCwwLDAsOS45bDYuMzEsNi4zMWExLDEsMCwwLDEsLjE4LDEuMTUsNDkuNzYsNDkuNzYsMCwwLDAtMiw0Ljg1LDEsMSwwLDAsMS0uOTQuNjhIN2E3LDcsMCwwLDAtNyw3VjczYTcsNywwLDAsMCw3LDdoOC45M2ExLDEsMCwwLDEsLjk0LjY4LDQ5LjksNDkuOSwwLDAsMCwyLDQuODUsMSwxLDAsMCwxLS4xOCwxLjE1TDEyLjM4LDkzYTcsNywwLDAsMCwwLDkuOWwxMi43MywxMi43M2E3LDcsMCwwLDAsOS45LDBsNi4zMS02LjMxYTEsMSwwLDAsMSwxLjE1LS4xOCw0OS43Niw0OS43NiwwLDAsMCw0Ljg1LDIsMSwxLDAsMCwxLC42OC45NFYxMjFhNyw3LDAsMCwwLDcsN0g3M2E3LDcsMCwwLDAsNy03di04LjkzYTEsMSwwLDAsMSwuNjgtLjk0LDQ5LjksNDkuOSwwLDAsMCw0Ljg1LTIsMSwxLDAsMCwxLDEuMTUuMThMOTMsMTE1LjYyYTcsNywwLDAsMCw5LjksMGwxMi43My0xMi43M2E3LDcsMCwwLDAsMC05LjlsLTYuMzEtNi4zMWExLDEsMCwwLDEtLjE4LTEuMTUsNDkuNzYsNDkuNzYsMCwwLDAsMi00Ljg1LDEsMSwwLDAsMSwuOTQtLjY4SDEyMWE3LDcsMCwwLDAsNy03VjU1QTcsNywwLDAsMCwxMjEsNDhabTEsMjVhMSwxLDAsMCwxLTEsMWgtOC45M2E3LDcsMCwwLDAtNi42LDQuNjksNDMuOSw0My45LDAsMCwxLTEuNzYsNC4yNiw3LDcsMCwwLDAsMS4zNSw4bDYuMzEsNi4zMWExLDEsMCwwLDEsMCwxLjQxTDk4LjY1LDExMS4zOGExLDEsMCwwLDEtMS40MSwwbC02LjMxLTYuMzFhNyw3LDAsMCwwLTgtMS4zNSw0My44OCw0My44OCwwLDAsMS00LjI3LDEuNzYsNyw3LDAsMCwwLTQuNjgsNi42VjEyMWExLDEsMCwwLDEtMSwxSDU1YTEsMSwwLDAsMS0xLTF2LTguOTNhNyw3LDAsMCwwLTQuNjktNi42LDQzLjksNDMuOSwwLDAsMS00LjI2LTEuNzYsNyw3LDAsMCwwLTgsMS4zNWwtNi4zMSw2LjMxYTEsMSwwLDAsMS0xLjQxLDBMMTYuNjIsOTguNjVhMSwxLDAsMCwxLDAtMS40MWw2LjMxLTYuMzFhNyw3LDAsMCwwLDEuMzUtOCw0My44OCw0My44OCwwLDAsMS0xLjc2LTQuMjdBNyw3LDAsMCwwLDE1LjkzLDc0SDdhMSwxLDAsMCwxLTEtMVY1NWExLDEsMCwwLDEsMS0xaDguOTNhNyw3LDAsMCwwLDYuNi00LjY5LDQzLjksNDMuOSwwLDAsMSwxLjc2LTQuMjYsNyw3LDAsMCwwLTEuMzUtOGwtNi4zMS02LjMxYTEsMSwwLDAsMSwwLTEuNDFMMjkuMzUsMTYuNjJhMSwxLDAsMCwxLDEuNDEsMGw2LjMxLDYuMzFhNyw3LDAsMCwwLDgsMS4zNSw0My44OCw0My44OCwwLDAsMSw0LjI3LTEuNzZBNyw3LDAsMCwwLDU0LDE1LjkzVjdhMSwxLDAsMCwxLDEtMUg3M2ExLDEsMCwwLDEsMSwxdjguOTNhNyw3LDAsMCwwLDQuNjksNi42LDQzLjksNDMuOSwwLDAsMSw0LjI2LDEuNzYsNyw3LDAsMCwwLDgtMS4zNWw2LjMxLTYuMzFhMSwxLDAsMCwxLDEuNDEsMGwxMi43MywxMi43M2ExLDEsMCwwLDEsMCwxLjQxbC02LjMxLDYuMzFhNyw3LDAsMCwwLTEuMzUsOCw0My44OCw0My44OCwwLDAsMSwxLjc2LDQuMjcsNyw3LDAsMCwwLDYuNiw0LjY4SDEyMWExLDEsMCwwLDEsMSwxWiIvPjwvc3ZnPg==");
+    background-repeat: no-repeat;
+    padding: 10px;
+    background-size: contain;
+    background-color: transparent;
+    opacity: 0.3;
+}
+
+.text-settings-button:hover {
+    opacity: 1;
+}
+
+.template-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+.template-item {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+.template-item  {
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+}
+
+.template-item img {
+    max-width: 100%;
+    max-height: 150px;
+}
+.template-item h3 {
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin-top: 5px;
+    color: #0d120a;
+}
+.template-item:hover h3 {
+    color: #0f70e6;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+.pagination a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #4285f4;
+    font-weight: bold;
+    padding: 8px 15px;
+}
+
+.link-button {
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+.sprite {
+    background-image: url(../img/sprites/memes.webp);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 100px;
+    background-size: 4500px 445px;
+}
+.sprite-1 { background-position-x: 0; height: 100px; }
+.sprite-2 { background-position-x: -100px; height: 134.5px; }
+.sprite-3 { background-position-x: -200px; height: 99px; }
+.sprite-4 { background-position-x: -300px; height: 66.5px; }
+.sprite-5 { background-position-x: -400px; height: 95.5px; }
+.sprite-6 { background-position-x: -500px; height: 151.5px; }
+.sprite-7 { background-position-x: -600px; height: 100px; }
+.sprite-8 { background-position-x: -700px; height: 75px; }
+.sprite-9 { background-position-x: -800px; height: 77px; }
+.sprite-10 { background-position-x: -900px; height: 64px; }
+.sprite-11 { background-position-x: -1000px; height: 100.5px; }
+.sprite-12 { background-position-x: -1100px; height: 151.5px; }
+.sprite-13 { background-position-x: -1200px; height: 68px; }
+.sprite-14 { background-position-x: -1300px; height: 103px; }
+.sprite-15 { background-position-x: -1400px; height: 164.5px; }
+.sprite-16 { background-position-x: -1500px; height: 83.5px; }
+.sprite-17 { background-position-x: -1600px; height: 82px; }
+.sprite-18 { background-position-x: -1700px; height: 98.5px; }
+.sprite-19 { background-position-x: -1800px; height: 59px; }
+.sprite-20 { background-position-x: -1900px; height: 123px; }
+.sprite-21 { background-position-x: -2000px; height: 100px; }
+.sprite-22 { background-position-x: -2100px; height: 66.5px; }
+.sprite-23 { background-position-x: -2200px; height: 78.5px; }
+.sprite-24 { background-position-x: -2300px; height: 75px; }
+.sprite-25 { background-position-x: -2400px; height: 117px; }
+.sprite-26 { background-position-x: -2500px; height: 100px; }
+.sprite-27 { background-position-x: -2600px; height: 98.5px; }
+.sprite-28 { background-position-x: -2700px; height: 142px; }
+.sprite-29 { background-position-x: -2800px; height: 56.5px; }
+.sprite-30 { background-position-x: -2900px; height: 100px; }
+.sprite-31 { background-position-x: -3000px; height: 140.5px; }
+.sprite-32 { background-position-x: -3100px; height: 106.5px; }
+.sprite-33 { background-position-x: -3200px; height: 170.5px; }
+.sprite-34 { background-position-x: -3300px; height: 222.5px; }
+.sprite-35 { background-position-x: -3400px; height: 100px; }
+.sprite-36 { background-position-x: -3500px; height: 75px; }
+.sprite-37 { background-position-x: -3600px; height: 132px; }
+.sprite-38 { background-position-x: -3700px; height: 139.5px; }
+.sprite-39 { background-position-x: -3800px; height: 83px; }
+.sprite-40 { background-position-x: -3900px; height: 75px; }
+.sprite-41 { background-position-x: -4000px; height: 56.5px; }
+.sprite-42 { background-position-x: -4100px; height: 97px; }
+.sprite-43 { background-position-x: -4200px; height: 133.5px; }
+.sprite-44 { background-position-x: -4300px; height: 64.5px; }
+.sprite-45 { background-position-x: -4400px; height: 132.5px; }
+
+.sprite-46 { background-position-x: 0; background-position-y: -223px; height: 144px; }
+.sprite-47 { background-position-x: -100px; background-position-y: -223px; height: 100px; }
+.sprite-48 { background-position-x: -200px; background-position-y: -223px; height: 114px; }
+.sprite-49 { background-position-x: -300px; background-position-y: -223px; height: 80px; }
+.sprite-50 { background-position-x: -400px; background-position-y: -223px; height: 74px; }
+.sprite-51 { background-position-x: -500px; background-position-y: -223px; height: 56px; }
+.sprite-52 { background-position-x: -600px; background-position-y: -223px; height: 56px; }
+.sprite-53 { background-position-x: -700px; background-position-y: -223px; height: 69px; }
+.sprite-54 { background-position-x: -800px; background-position-y: -223px; height: 86px; }
+.sprite-55 { background-position-x: -900px; background-position-y: -223px; height: 112px; }
+.sprite-56 { background-position-x: -1000px; background-position-y: -223px; height: 125px; }
+.sprite-57 { background-position-x: -1100px; background-position-y: -223px; height: 100px; }
+.sprite-58 { background-position-x: -1200px; background-position-y: -223px; height: 73px; }
+.sprite-59 { background-position-x: -1300px; background-position-y: -223px; height: 72px; }
+.sprite-60 { background-position-x: -1400px; background-position-y: -223px; height: 79px; }
+.sprite-61 { background-position-x: -1500px; background-position-y: -223px; height: 100px; }
+.sprite-62 { background-position-x: -1600px; background-position-y: -223px; height: 143px; }
+.sprite-63 { background-position-x: -1700px; background-position-y: -223px; height: 84px; }
+.sprite-64 { background-position-x: -1800px; background-position-y: -223px; height: 65px; }
+.sprite-65 { background-position-x: -1900px; background-position-y: -223px; height: 92px; }
+.sprite-66 { background-position-x: -2000px; background-position-y: -223px; height: 100px; }
+.sprite-67 { background-position-x: -2100px; background-position-y: -223px; height: 109px; }
+.sprite-68 { background-position-x: -2200px; background-position-y: -223px; height: 70px; }
+.sprite-69 { background-position-x: -2300px; background-position-y: -223px; height: 125px; }
+.sprite-70 { background-position-x: -2400px; background-position-y: -223px; height: 87px; }
+.sprite-71 { background-position-x: -2500px; background-position-y: -223px; height: 100px; }
+.sprite-72 { background-position-x: -2600px; background-position-y: -223px; height: 100px; }
+.sprite-73 { background-position-x: -2700px; background-position-y: -223px; height: 88px; }
+.sprite-74 { background-position-x: -2800px; background-position-y: -223px; height: 75px; }
+.sprite-75 { background-position-x: -2900px; background-position-y: -223px; height: 64px; }
+.sprite-76 { background-position-x: -3000px; background-position-y: -223px; height: 70px; }
+.sprite-77 { background-position-x: -3100px; background-position-y: -223px; height: 67px; }
+.sprite-78 { background-position-x: -3200px; background-position-y: -223px; height: 56px; }
+.sprite-79 { background-position-x: -3300px; background-position-y: -223px; height: 95px; }
+.sprite-80 { background-position-x: -3400px; background-position-y: -223px; height: 98px; }
+.sprite-81 { background-position-x: -3500px; background-position-y: -223px; height: 69px; }
+.sprite-82 { background-position-x: -3600px; background-position-y: -223px; height: 91px; }
+.sprite-83 { background-position-x: -3700px; background-position-y: -223px; height: 100px; }
+.sprite-84 { background-position-x: -3800px; background-position-y: -223px; height: 121px; }
+.sprite-85 { background-position-x: -3900px; background-position-y: -223px; height: 126px; }
+.sprite-86 { background-position-x: -4000px; background-position-y: -223px; height: 72px; }
+.sprite-87 { background-position-x: -4100px; background-position-y: -223px; height: 109px; }
+.sprite-88 { background-position-x: -4200px; background-position-y: -223px; height: 107px; }
+.sprite-89 { background-position-x: -4300px; background-position-y: -223px; height: 100px; }
+.sprite-90 { background-position-x: -4400px; background-position-y: -223px; height: 109px; }
+
+
+
+
