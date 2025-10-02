@@ -4,7 +4,7 @@ const copy = document.getElementById("copy");
 const copied = document.getElementById("copied");
 
 copyButton.addEventListener("click", function() {
-    const linkText = '<a href="https://rounder.pics" target="_blank">Rounder</a>';  // Получаем текст ссылки
+    const linkText = '<a href="https://www.cropimages.org" target="_blank">Crop Images</a>';  // Получаем текст ссылки
 
     // Копируем текст в буфер обмена
     navigator.clipboard.writeText(linkText).then(() => {
